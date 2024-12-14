@@ -13,7 +13,7 @@ public class SturlesePauMain {
         System.out.println("[1] Añadir evento");
         System.out.println("[2] Borrar evento");
         System.out.println("[3] Listar eventos");
-        System.out.println("[4] Marcar/desmarcar tarea de un evento como completado");
+        System.out.println("[4] Marcar/desmarcar tarea de u1n evento como completado");
         System.out.println("[5] Salir");
 
         option= scanner.nextInt();
