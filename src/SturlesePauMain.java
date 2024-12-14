@@ -1,10 +1,14 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class SturlesePauMain {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         int option;
+
+        //Creamos la lista para almacenar los eventos
+        ArrayList<SturlesePauEvent> eventos = new ArrayList<>();
 
         do{
 
@@ -22,12 +26,22 @@ public class SturlesePauMain {
         switch (option){
             case 1:
                 System.out.println("[1] Añadir evento");
+
                 break;
             case 2:
                  System.out.println("[2] Borrar evento");
                  break;
             case 3:
                  System.out.println("[3] Listar eventos");
+                 if (eventos.isEmpty()){
+                     System.out.println("\nNo hay eventos disponibles.");
+                 } else {
+                     System.out.println("Lista de eventos:");
+                     for (SturlesePauEvent evento : eventos){
+                         System.out.println(evento);
+                     }
+                 }
+
                  break;
             case 4:
                  System.out.println("[4] Marcar/desmarcar tarea de un evento como completado");
@@ -40,6 +54,8 @@ public class SturlesePauMain {
             }
 
         }while (option != 5);
+
+        scanner.close();
     }
 }
 
